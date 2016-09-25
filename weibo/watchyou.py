@@ -111,11 +111,4 @@ def robot(info):
 
 weibo = WeiboClient()
 reply_all()
-comment_all('东北大学软件1403')
-
-if __name__ == '__main__':
-    fetch_statuses()
-    #     print(s)
-    # 取消关注一些账号, 用新买的号或者就是现在用的号
-    # 每十分钟刷新一次timeline, 获取他的微博, 并获取私信或者回复消息
-    # 调用机器人api, 发表评论, 回复消息
+comment_all('uid or screen_name')

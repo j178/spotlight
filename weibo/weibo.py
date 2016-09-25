@@ -78,13 +78,3 @@ class WeiboClient:
             log.error('Token file not exist or file content has been destroyed')
             raise TokenNotExistError
         self.session.token = OAuth2Token(token)
-
-
-if __name__ == '__main__':
-    weibo = WeiboClient()
-
-    r = weibo.statuses.update.post(status='test')
-    # r = weibo.comments.show.get(id='4014210763655564')
-    # with open('data/comments.json', 'w', encoding='utf-8') as f:
-    #     f.write(r.text)
-    print(r.text)
