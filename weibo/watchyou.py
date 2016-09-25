@@ -10,9 +10,8 @@ from weibo import WeiboClient
 def fetch_statuses(uid=None, screen_name=None):
     """
     微博API升级, statuses/user_timeline接口的 uid/screen_name 只能为当前授权的用户, 即与 access_token 的所有者要匹配
-    测试使用home_timeline然后筛选是否可以
     :param int uid: uid
-    :param str screen_name: 二选一
+    :param str screen_name: 与 uid 二选一
     """
     since_id = get_since_id('status')
     params = dict(since_id=since_id, max_id=None, count=100, page=None, trim_user=0)
