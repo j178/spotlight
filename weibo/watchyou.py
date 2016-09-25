@@ -51,10 +51,9 @@ def fetch_replies():
 
 
 def get_since_id(type=None, file=SINCE_ID_FILE):
-    if type is None:
-        return get_since_id.since_id
-
     if hasattr(get_since_id, 'since_id') and get_since_id.since_id:
+        if type is None:
+            return get_since_id.since_id
         return get_since_id.since_id[type]
 
     try:
