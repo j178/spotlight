@@ -8,7 +8,7 @@ from json.decoder import JSONDecodeError
 from oauthlib.oauth2.rfc6749.tokens import OAuth2Token
 from requests_oauthlib import OAuth2Session
 
-from .config import *
+from config import *
 
 log = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s [%(module)14s] [%(levelname)7s] %(message)s')
